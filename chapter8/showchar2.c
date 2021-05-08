@@ -1,4 +1,4 @@
-// 有较大问题的I/O程序
+// 修改后的程序
 #include <stdio.h>
 void display(char cr, int lines, int width);
 int main(void)
@@ -9,9 +9,12 @@ int main(void)
     printf("Enter a character and two integers:\n");
     while ((ch = getchar()) != '\n')
     {
-        scanf("%d %d", &rows, &cols);   // 这里的换行符会导致程序执行一遍直接退出
+        if (scanf("%d %d", &rows, &cols) != 2)
+            break;
         display(ch, rows, cols);
-        printf("Enter another character and two integers.\n");
+        while (getchar() != '\n')
+            continue;
+        printf("Enter another character and two integers;\n");
         printf("Enter a newline to quit.\n");
     }
     printf("Bye.\n");
