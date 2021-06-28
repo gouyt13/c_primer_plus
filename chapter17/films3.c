@@ -2,6 +2,7 @@
 // 和lists.c一起编译
 #include <stdio.h>
 #include <stdlib.h> // exit()
+#include <string.h>
 #include "list.h"   // List, Item
 void showmovies(Item item);
 char *s_gets(char *st, int n);
