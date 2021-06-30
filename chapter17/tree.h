@@ -32,17 +32,17 @@ typedef struct tree
 // 操作： 把树初始化为空
 // 前提条件： ptree指向一个树
 // 后置条件： 树被初始化为空
-void InitialzeTree(Tree *ptree);
+void InitializeTree(Tree *ptree);
 
 // 操作： 确定树是否为空
 // 前提条件： ptree指向一个树
 // 后置条件： 如果树为空，返回true；否则返回false
-bool TreeIsEmpty(Tree *ptree);
+bool TreeIsEmpty(const Tree *ptree);
 
 // 操作： 确定树是否已满
 // 前提条件： ptree指向一个树
 // 后置条件： 如果树已满，返回true；否则返回false
-bool TreeIsFull(Tree *ptree);
+bool TreeIsFull(const Tree *ptree);
 
 // 操作： 确定树的项数
 // 前提条件： ptree指向一个树
